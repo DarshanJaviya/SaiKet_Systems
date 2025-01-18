@@ -1,0 +1,195 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E9E8E8;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F2F2F3;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#image-section {
+    flex: 1 1 50%;
+    background-color: #F2F2F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-id {
+    max-width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-radius: 5%;
+    border: 1px solid #F2F2F3;
+}
+
+#info-container {
+    flex: 1 1 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: black;
+    border-radius: 5%;
+}
+
+#brand-name {
+    font-size: 1.2rem;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#product-name {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+#product-price{
+    font-size: 1.5rem;
+    color: white;
+}
+
+#rating-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.5rem;
+    color: #f59e0b;
+}
+
+#description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#colors-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.color-option {
+    text-align: center;
+}
+
+.color-id {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: border-color 0.3s ease;
+}
+
+#item {
+    color: white;
+}
+
+.color-id:hover {
+    border-color: black;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-btn {
+    background-color: white;
+    color: black;
+    width: 715px;
+}
+
+.cart-btn:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    transform: translateY(-2px);
+    transition: border 0.2s ease;
+}
+
+.apple-pay-btn {
+    background-color: black;
+    color: white;
+    width: 715px;
+    border: 1px solid white;
+}
+
+.apple-pay-btn:hover {
+    border: 2px solid white;
+    transform: translateY(-2px);
+    transition: border 0.1s ease;
+}
+
+
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #image-section, #info-container {
+        flex: 1 1 100%;
+    }
+
+    #image-id {
+        max-width: 100%;
+    }
+
+    .cart-btn, .apple-pay-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #product-name {
+        font-size: 2rem;
+    }
+
+    #rating-container {
+        font-size: 1.2rem;
+    }
+
+    #description {
+        font-size: 0.8rem;
+    }
+
+    .color-id {
+        width: 80px;
+        height: 80px;
+    }
+}
